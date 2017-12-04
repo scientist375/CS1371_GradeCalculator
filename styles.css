@@ -1,0 +1,132 @@
+/*
+CS1371 final project done by Angad Daryani
+Instructor: Kantwon Rogers
+Assigned Recitation: A03
+Attended Recitation: D05
+Programed between 24th-26th November 2017
+
+Total CSS styles used: 20
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Arvo:400,700|Montserrat:300i,400,500,600,700|Orbitron');
+
+body{ 
+	padding:60px;
+	background-color: #f2f2f2;
+}
+
+.colorful{
+	color:#FF0066;
+}
+
+.tabler{
+	background-color: #fff;
+	width: 100%;
+}
+
+
+.heading_1{
+	
+	 font-size:40px; 
+	 font-family:'Arvo',sans-serif; 
+	 color: black;
+	 margin-right: auto;
+	 margin-left: auto;
+	 max-width: 400px;
+	 text-decoration: underline;
+	 font-weight: 400;
+
+}
+
+.heading_2{
+	text-transform: uppercase;
+	font-family:'Orbitron',sans-serif;
+}
+
+/*
+img{
+	border:1px dotted #dddddd;
+}
+*/
+
+p{
+	font-family:'Montserrat',sans-serif;
+	font-weight: 
+	line-height: 1.6;
+	font-size: 20px;
+	text-align: justify;
+}
+
+
+.centerimg{
+	display:inline-block;
+
+
+}
+
+.centerimg:nth-child(1)
+{
+	float:left;
+}
+
+.centerimg:nth-child(2){
+	margin-left: 160px;
+
+}
+
+.centerimg:nth-child(3){
+	float:right;
+}
+
+.form-column{
+	font-family:'Montserrat',sans-serif;
+	line-height: 1.6;
+	font-size: 20px;
+	text-align: justify;
+	display:inline-block;
+	width:200px;
+	color:  #34495E;
+	vertical-align: middle;
+}
+
+.orienter
+{
+   vertical-align: middle;
+}
+
+
+.batoon
+{
+	font-size: 16px;
+	padding: 14px 40px;
+	border-radius: 12px;
+	border: 2px solid #F5B041;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.14), 0 12px 30px 0 rgba(0,0,0,0.09);
+	background-color: white;
+}
+
+.batoonCol
+{
+	font-size: 16px;
+	padding: 12px 30px;
+	border-radius: 12px;
+	border: 2px solid #F5B041;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 12px 30px 0 rgba(0,0,0,0.19);
+	font-family:'Montserrat',sans-serif;
+	text-align: justify;
+	display:inline-block;
+	vertical-align: middle;
+	background-color: white;
+}
+
+.pcol{
+	font-family:'Montserrat',sans-serif;
+	line-height: 1.6;
+	font-size: 20px;
+	text-align: justify;
+	display:inline-block;
+	vertical-align: middle;
+	color: #F5B041;
+
+}
+

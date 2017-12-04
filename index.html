@@ -1,0 +1,161 @@
+<!--
+CS1371 final project done by Angad Daryani
+Instructor: Kantwon Rogers
+Assigned Recitation: A03
+Attended Recitation: D05
+Programed between 24th-26th November 2017
+-->	
+
+<!-- Declaring the program to be an HTML5-->
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!--Things in the head are not visible on the main web page itself-->
+<head>
+	<title>Angad Daryani's grade calculator</title>
+	 <meta charset="UTF-8">
+	 <link rel="stylesheet" href="styles.css">
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	 <script type="text/javascript" src="calculate.js"></script>
+</head>
+
+<!-- Whatever is here will be on the main web page -->
+<body>
+	<h2 class="heading_2 centerimg"> CS1371 Final Project</h2>
+	<img src = "buzz.png" class ="centerimg" alt = "A picture of buzz" width = "150" height = "150">
+	<h2 class = "heading_2 centerimg"> Fall 2017</h2>
+	<h1 class = "heading_1">Grade Calculator</h1>
+    <div>
+	    <p>Finals are approaching and I know that can be stressful. But hey, we may still be able to sweat it out and come out of this semester with <span class = 'colorful'> <i>flying colors</i></span>. This website allows you to calcualte how much you need to score on the final to get your desired grade in the class. Let me remind you, it's great that you're working hard, but know that the world doesn't come to an end if you don't meet that target. Good Luck! <br> You're on your way to becoming a <b>'Helluva Engineer'</b>!
+	    </p>
+   </div>
+
+   <hr> <!-- This puts the horizontal line between the paragraph and the form-->
+   <div style="text-align: center;">
+   <p class = "pcol" style = "padding-right: 10px;"><b>Select Class: </b>
+	  <div class = "form-column">
+		  <select style = "font-family: Monteserrat; size: 20px; color: #34495E; width: 75px; height:30px;" id = "classesList" name = "Select Class">
+		  <option value="CS1371">CS1371</option>
+		  <option value="AE1350">AE1350</option>
+		  <option value="AE1601">AE1601</option>
+		  <option value="AE1770">AE1770</option>
+		  <option value="CHEM1211">CHEM1211</option>
+		  <option value="CHEM1212">CHEM1212</option>
+		  <option value="CHEM1315">CHEM1315</option>
+		  <option value="CHEM2311">CHEM2311</option>
+		  <option value="ECON1101">ECON1101</option>
+		  <option value="ECON2100">ECON2100</option>
+		  <option value="ECON2101">ECON2101</option>
+		  <option value="ENGL1101">ENGL1101</option>
+		  <option value="ENGL1102">ENGL1102</option>
+		  <option value="MATH1111">MATH1111</option>
+		  <option value="MATH1113">MATH1113</option>
+		  <option value="MATH1501">MATH1501</option>
+		  <option value="MATH1502">MATH1502</option>
+		  <option value="PHYS2211">PHYS2211</option>
+		  <option value="PHYS2212">PHYS2212</option>
+		  <option value="PHYS2213">PHYS2213</option>
+		  <option value="PHIL2010">PHIL2010</option>
+		  <option value="PHIL2025">PHIL2025</option>
+		  <option value="PSYC2005">PSYC2005</option>
+		  <option value="PSYC2020">PSYC2020</option>
+		  <option value="PSYC2103">PSYC2103</option>
+		  <option value="NRE2110">NRE2110</option>
+		  <option value="NRE2698">NRE2698</option>
+		  <option value="CS1331">CS1331</option>
+		  <option value="CS1332">CS1332</option>
+		  <option value="ECE1010">ECE1010</option>
+		  <option value="ECE2020">ECE2020</option>
+		  <option value="ECE2026">ECE2026</option>
+		</select>
+	</div>
+
+	<button class="batoonCol" id="classes" onclick="autoload();">Auto-Load Weights</button>
+</div>
+</p>
+<!--The form is created by creating multiple nested DIVs. The outermost DIV handles all content within it. Each nested div(representing rows on the form) has 3 nested divs(representing the columns) within it. Scores are stored in variables which are sent to the javascript program,computed and returned-->
+
+<form>
+	<div style="text-align: center;">
+		<div>
+			<div class="form-column"><b>Category</b></div>
+			<div class="form-column"><b>Weight (%)</b></div>
+			<div class="form-column"><b>My Score</b></div>
+		</div>
+		<div>
+			<div class = "form-column">Test Scores</div>
+			<div class="form-column">
+				<input type="text" id="w1">
+			</div>
+
+			<div class = "form-column">
+				<input type="text" id="s1">
+			</div>
+		</div>
+		<div>
+			<div class = "form-column">Homework Scores</div>
+			<div class="form-column">
+				<input type="text" id="w2">
+			</div>
+
+			<div class = "form-column">
+				<input type="text" id="s2">
+			</div>
+		</div>
+		<div>
+			<div class = "form-column">Quiz Scores</div>
+			<div class="form-column">
+				<input type="text" id="w3">
+			</div>
+
+			<div class = "form-column">
+				<input type="text" id="s3">
+			</div>
+		</div>
+		<div>
+			<div class = "form-column">Class Participation</div>
+			<div class="form-column">
+				<input type="text" id="w4">
+			</div>
+
+			<div class = "form-column">
+				<input type="text" id="s4">
+			</div>
+		</div>
+		<div>
+			<div class = "form-column">Extra Credit</div>
+			<div class="form-column">
+				<input type="text" id="w5">
+			</div>
+
+			<div class = "form-column">
+				<input type="text" id="s5">
+			</div>
+		</div>
+		<div>
+			<div class = "form-column">Final Exam Score</div>
+			<div class="form-column">
+				<input type="text" id="w6">
+			</div>
+			<div class = "form-column"></div>
+	</div>
+	</div>
+
+	<!--The button-->
+	<div style="text-align: center;"> 
+		<div style="margin-top:30px; font-family: 'Montserrat',sans-serif;font-size: 20px;color: #34495E;">
+			<div>Calculate how much I need to get a <input type="text" id="s6"> in this class</div>
+		</div>
+		<div style="margin-top:30px; font-family: 'Montserrat',sans-serif;font-size: 20px; color:#34495E; text-align: center; vertical-align: middle;">
+			<input class = "batoon" type="button" value = "Calculate!" onclick="calculate();">
+		</div>
+	</div>
+	<div style="margin-top:30px; text-align: center;">
+		<div>
+			<div id="output" style = "margin-top:30px; font-family: 'Montserrat',sans-serif;font-size: 20px;color: #34495E;" ><span id = "result">The output will appear here</span></div>
+
+		</div>
+	</div> 
+</form>
+</body>
+</html>
